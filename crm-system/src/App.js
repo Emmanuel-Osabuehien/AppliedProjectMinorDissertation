@@ -3,11 +3,15 @@ import './App.css';
 
 import Button from 'react-bootstrap/Button';
 import { Entry } from './pages/entry/EntryPage';
+import { DefaultLayout } from './layout/DefaultLayout';
 
 function App() {
   return (
     <div className="App">
-     <Entry />
+     {/*<Entry /> */}
+     <DefaultLayout>
+       //Dashboard
+     </DefaultLayout>
     </div>
   );
 }
