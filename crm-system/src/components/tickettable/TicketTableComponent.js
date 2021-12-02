@@ -18,8 +18,8 @@ export const TicketTable = ({tickets}) => {
        <tbody>
           {tickets.length ? (
           tickets.map((row) => (
-            <tr key={row._id}>
-              <td>{row._id}</td>
+            <tr key={row.id}>
+              <td>{row.id}</td>
               <td>{row.subject}</td>
               <td>{row.status}</td>
               <td>{row.addedAt}</td>
