@@ -1,0 +1,21 @@
+.my-jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+   url('https://img.wallpapersafari.com/desktop/1600/900/60/87/sRyDw7.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.my-jumbotron h1, h2 {
+  color: white;
+}
+
+.button-input {
+  width: 60%;
+  margin-top: 30px;
+}
