@@ -5,8 +5,8 @@ import "./style.css"
 function MealsContainer({ meals }) {
   return (
     <div className="meals-container">
-      {meals.map((meal, idx) => (
-        <MealCard {...meal}/>
+      {meals.map((meal) => (
+        <MealCard key={meal.idMeal} {...meal}/>
       ))}
     </div>
   );

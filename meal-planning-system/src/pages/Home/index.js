@@ -1,11 +1,12 @@
 import React from 'react';
 import AppJumbotron from '../../components/Jumbotron';
 import axios from 'axios'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import MealsContainer from "../../components/MealsContainer"
+import { MyContext } from '../../context';
 
 function Home() {
-  const [meals, setMeals] = useState([]);
+  const {meals, setMeals} = useContext(MyContext);
 
   useEffect(() => {
     axios
