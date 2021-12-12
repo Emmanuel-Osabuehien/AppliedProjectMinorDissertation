@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import axios from "axios";
+import axios from "../../Axios";
 import { Form, Button } from 'react-bootstrap'
 import { MyContext } from '../../context';
 
@@ -14,8 +14,11 @@ function Login() {
       return alert('Please fill out required field(s)')
     }
     axios
-    .post("http://localhost:5000/login", {email, password})
-    .then(( {data }) => setUser(data))
+    .post("/login", {email, password})
+    .then(( {data }) => { 
+      setUser(data);
+      localStorage.setItem('token', data.token);
+    })
     .catch((err) => console.log(err))
   }
   return (

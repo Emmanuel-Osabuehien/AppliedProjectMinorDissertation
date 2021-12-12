@@ -1,37 +1,48 @@
 import React, { useContext } from 'react';
-import { Nav, Navbar, Container} from 'react-bootstrap';
+import { Nav, Navbar, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { MyContext } from '../../context';
+import axios from '../../Axios';
+import { useHistory } from 'react-router-dom';
 
 function AppNavbar() {
-const { user } = useContext(MyContext);
+  const history = useHistory();
+  const { user, setUser } = useContext(MyContext);
+  const handleLogout = () => {
+    axios.post("/logout").then(() => {
+      localStorage.removeItem("token");
+      setUser(null);
+      history.replace("/");
+    });
+  };
 
   return (
     <Navbar bg="light" expand="lg">
-  <Container>
-  <LinkContainer to="/">
-    <Navbar.Brand href="#home">
-    MealPrepPro
-    </Navbar.Brand>
-    </LinkContainer>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      {!user && (
-      <Nav className="me-auto">
+      <Container>
         <LinkContainer to="/">
-        <Nav.Link href="#home">Home</Nav.Link>
+          <Navbar.Brand href="#home">
+            MealPrepPro
+    </Navbar.Brand>
         </LinkContainer>
-        <LinkContainer to="/login">
-        <Nav.Link href="#link">Login</Nav.Link>
-        </LinkContainer>
-        <LinkContainer to="/register">
-        <Nav.Link href="#link">Register</Nav.Link>
-        </LinkContainer>
-      </Nav>
-      )}
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          {!user && (
+            <Nav className="me-auto">
+              <LinkContainer to="/">
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/login">
+                <Nav.Link>Login</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/register">
+                <Nav.Link>Register</Nav.Link>
+              </LinkContainer>
+            </Nav>
+          )}
+          {user && <Nav.Link onClick={handleLogout}>Logout</Nav.Link>}
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
 
