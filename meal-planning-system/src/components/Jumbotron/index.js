@@ -10,9 +10,10 @@ function AppJumbotron() {
   const {setMeals} = useContext(MyContext);
 
   function handleSearch() {
-    axios
-    .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
-    .then(({data}) => setMeals(data.meals));
+    fetch(
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`
+      ).then((res) => res.json())
+    .then((data) => setMeals(data.meals));
   }
 
   return (

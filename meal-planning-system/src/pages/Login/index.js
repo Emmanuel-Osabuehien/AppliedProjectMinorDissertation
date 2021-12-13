@@ -2,8 +2,10 @@ import React, { useState, useContext } from 'react';
 import axios from "../../Axios";
 import { Form, Button } from 'react-bootstrap'
 import { MyContext } from '../../context';
+import { useHistory } from 'react-router-dom';
 
 function Login() {
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { setUser } = useContext(MyContext);
@@ -18,6 +20,7 @@ function Login() {
     .then(( {data }) => { 
       setUser(data);
       localStorage.setItem('token', data.token);
+      history.replace("/");
     })
     .catch((err) => console.log(err))
   }

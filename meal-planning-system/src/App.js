@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp/SignUp';
 import { useContext, useEffect } from 'react';
 import axios from './Axios';
+import Favorites from './pages/Favorites/Favorites';
 
 function App() {
 
@@ -32,6 +33,11 @@ function App() {
                 <SignUp />
               </Route>
             </>
+          )}
+          {user && (
+            <Route exact path="/my-meals">
+              <Favorites />
+            </Route>
           )}
           <Route>
             <ErrorPage />

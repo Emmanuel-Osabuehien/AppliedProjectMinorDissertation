@@ -33,13 +33,20 @@ function AppNavbar() {
               </LinkContainer>
               <LinkContainer to="/login">
                 <Nav.Link>Login</Nav.Link>
-              </LinkContainer>
+              </LinkContainer>{" "}
               <LinkContainer to="/register">
                 <Nav.Link>Register</Nav.Link>
               </LinkContainer>
             </Nav>
           )}
-          {user && <Nav.Link onClick={handleLogout}>Logout</Nav.Link>}
+          {user && (
+          <>
+          <LinkContainer to="/my-meals">
+                <Nav.Link>Meals</Nav.Link>
+              </LinkContainer>{" "}
+          <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+          </>
+          )}
         </Navbar.Collapse>
       </Container>
     </Navbar>

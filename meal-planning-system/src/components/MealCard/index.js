@@ -3,13 +3,16 @@ import { Card } from 'react-bootstrap';
 import MealModal from '../MealModal';
 import "./style.css"
 
-function MealCard({strMeal, strMealThumb, strInstructions}) {
+function MealCard({strMeal, strMealThumb, strInstructions, idMeal}) {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={strMealThumb} />
       <Card.Body>
         <Card.Title>{strMeal}</Card.Title>
-        <MealModal title={strMeal} description={strInstructions}/>
+        <MealModal 
+        title={strMeal} 
+        description={strInstructions} 
+        idMeal={idMeal}/>
         </Card.Body>
     </Card>
   )

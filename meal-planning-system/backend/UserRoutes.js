@@ -38,4 +38,20 @@ router.post('/logout', authUser, async (req, res) => {
   res.status(200).send()
 })
 
+router.post('/add-meals', authUser, async (req, res) => {
+  const {mealId} = req.body;
+  const user = req.user;
+  user.favorites.push(mealId);
+  await user.save();
+  res.status(200).send(user)
+})
+
+router.post('/remove-meals', authUser, async (req, res) => {
+  const {mealId} = req.body;
+  const user = req.user;
+  user.favorites = user.favorites.filter(id => id !== mealId);
+  await user.save();
+  res.status(200).send(user)
+})
+
 module.exports = router;
