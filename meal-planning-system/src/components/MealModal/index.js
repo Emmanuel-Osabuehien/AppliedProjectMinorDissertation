@@ -6,29 +6,39 @@ import { MyContext } from '../../context';
 function MealModal({ title, description, idMeal }) {
   const [show, setShow] = useState(false);
   const { user, setUser } = useContext(MyContext);
+  const [loading, setLoading] = useState(false);
   console.log(idMeal)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   const handleAddToFavorites = () => {
-    console.log('mealId', idMeal)
+    console.log('mealId', idMeal);
+    setLoading(true);
     axios
       .post('/add-meals', { mealId: idMeal })
       .then(({ data }) => {
-        setUser(data)
-        alert('Meal Added To List')
+        setLoading(false);
+        setUser(data);
+        alert('Meal Added To List');
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        setLoading(false);
+       console.log(err);
+      });
   };
 
   const handleRemoveFromFavorites = () => {
+    setLoading(true);
     axios
       .post('/remove-meals', { mealId: idMeal })
       .then(({ data }) => {
+        setLoading(false);
         setUser(data)
         alert('Meal Removed From List')
       })
       .catch((err) => {
-        console.log(err)
+        setLoading(false);
+        console.log(err);
       });
   };
 
@@ -50,9 +60,15 @@ function MealModal({ title, description, idMeal }) {
           {user && (
             <>
               {user.favorites.includes(idMeal) ? (
-                <Button variant="danger" onClick={handleRemoveFromFavorites}>Remove From List</Button>
+                <Button variant="danger" 
+                onClick={handleRemoveFromFavorites}
+                disabled={loading}>
+                  Remove From List
+                  </Button>
               ) : (
-                  <Button variant="primary" onClick={handleAddToFavorites}>
+                  <Button variant="primary" 
+                  onClick={handleAddToFavorites}
+                  disabled={loading}>
                     Add To List
                   </Button>
                 )}
