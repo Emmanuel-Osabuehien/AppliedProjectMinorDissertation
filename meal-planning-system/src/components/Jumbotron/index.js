@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import "./style.css"
 import {InputGroup, FormControl, Button } from 'react-bootstrap'
 import { MyContext } from '../../context';
-import axios from 'axios';
 
 function AppJumbotron() {
 
@@ -30,6 +29,7 @@ function AppJumbotron() {
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <Button 
+        className="search-button"
         variant="danger" 
         id="meal-search-button" 
         onClick={handleSearch}>

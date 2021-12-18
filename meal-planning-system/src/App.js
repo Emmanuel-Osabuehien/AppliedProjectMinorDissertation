@@ -9,6 +9,7 @@ import SignUp from './pages/SignUp/SignUp';
 import { useContext, useEffect } from 'react';
 import axios from './Axios';
 import Favorites from './pages/Favorites/Favorites';
+import BMICalculator from './pages/BMI';
 
 function App() {
 
@@ -25,19 +26,24 @@ function App() {
             <Home />
           </Route>
           {!user && (
-            <>
+            <Switch>
               <Route exact path="/login">
                 <Login />
               </Route>
               <Route exact path="/register">
                 <SignUp />
               </Route>
-            </>
+            </Switch>
           )}
           {user && (
+            <Switch>
             <Route exact path="/my-meals">
               <Favorites />
             </Route>
+            <Route exact path="/bmi">
+              <BMICalculator />
+            </Route>
+            </Switch>
           )}
           <Route>
             <ErrorPage />
