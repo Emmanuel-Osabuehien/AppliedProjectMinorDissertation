@@ -47,6 +47,12 @@ function AppNavbar() {
               <LinkContainer to="/bmi">
                 <Nav.Link>BMI</Nav.Link>
               </LinkContainer>{" "}
+              <LinkContainer to="/shopping">
+                <Nav.Link>Shopping List</Nav.Link>
+              </LinkContainer>{" "}
+              <LinkContainer to="/requirements">
+                <Nav.Link>Requirements</Nav.Link>
+              </LinkContainer>{" "}
           <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
           </>
           )}

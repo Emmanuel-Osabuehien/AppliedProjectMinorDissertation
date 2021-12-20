@@ -10,6 +10,8 @@ import { useContext, useEffect } from 'react';
 import axios from './Axios';
 import Favorites from './pages/Favorites/Favorites';
 import BMICalculator from './pages/BMI';
+import ShoppingList from './pages/Shopping';
+import RequirementsPage from './pages/Requirements';
 
 function App() {
 
@@ -42,6 +44,12 @@ function App() {
             </Route>
             <Route exact path="/bmi">
               <BMICalculator />
+            </Route>
+            <Route exact path="/shopping">
+              <ShoppingList />
+            </Route>
+            <Route exact path="/requirements">
+              <RequirementsPage />
             </Route>
             </Switch>
           )}

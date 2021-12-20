@@ -22,16 +22,16 @@ export class BMICalculator extends Component {
       this.setState({ gender: value })
     }
     if (name === "weight") {
-      this.setState({ weight: parseInt(value) })
+      this.setState({ weight: value })
     }
     if (name === "age") {
-      this.setState({ age: parseInt(value) })
+      this.setState({ age: value })
     }
     if (name === "heightInches") {
-      this.setState({ heightInches: parseInt(value) })
+      this.setState({ heightInches: value })
     }
     if (name === "heightFeets") {
-      this.setState({ heightFeets: parseInt(value) })
+      this.setState({ heightFeets: value })
     }
     if (name === "activity") {
       this.setState({ activity: value })
