@@ -105,7 +105,7 @@ export class BMICalculator extends Component {
             <input value={age} onChange={this.handleChange} type="number" className="age" name="age" min="0" max="120" />
           </div>
           {error && <div className='error'>{error}</div>}
-          <button type="button" onClick={this.calculateBMR}>Calculate BMR</button>
+          <button className="BMIButton" type="button" onClick={this.calculateBMR}>Calculate BMR</button>
           {bmr !== 0 && <div className="result">{bmr.toFixed(2)} Calories/day</div>}
           <div className="workout">
             <div className="inputwrap">
@@ -119,7 +119,7 @@ export class BMICalculator extends Component {
                 <option value="1.9">Extremely Active (Very intense exercise, and physical job, exercise multiple times per day)</option>
               </select>
             </div>
-            <button type="button" onClick={this.calculateCalories}>Calculate Calories</button>
+            <button className="BMIButton" type="button" onClick={this.calculateCalories}>Calculate Calories</button>
             {calories !== 0 && <div className="result">{calories.toFixed(2)}  daily kilocalories  needed</div>}
           </div>
         </div>

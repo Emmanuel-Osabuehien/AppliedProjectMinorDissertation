@@ -78,7 +78,7 @@ input[type="submit"] {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
 }
-button {
+.BMIButton {
     display: block;
     width: 100%;
     padding: 10px 1px;
