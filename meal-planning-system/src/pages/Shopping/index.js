@@ -5,6 +5,9 @@ import { faChevronRight, faChevronLeft, faCircle, faCheckCircle, faPlus } from '
 
 const ShoppingList = () => {
 	const [items, setItems] = useState([
+    { itemName: 'Cheese', quantity: 1, isSelected: false },
+		{ itemName: 'Milk', quantity: 3, isSelected: true },
+		{ itemName: 'Chicken Breasts', quantity: 2, isSelected: false },
 	]);
 
 	const [inputValue, setInputValue] = useState('');
