@@ -1,0 +1,12 @@
+.Graphs {
+  text-align: center;
+  background-color: white;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  height: 20vh;
+  width: 40vw;
+  font-size: calc(10px + 2vmin);
+}

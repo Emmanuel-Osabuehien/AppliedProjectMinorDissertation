@@ -11,7 +11,7 @@ const ShoppingList = () => {
 	]);
 
 	const [inputValue, setInputValue] = useState('');
-	const [totalItemCount, setTotalItemCount] = useState(0);
+	const [totalItemCount, setTotalItemCount] = useState(6);
 
 	const handleAddButtonClick = () => {
 		const newItem = {
