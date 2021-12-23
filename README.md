@@ -1,11 +1,49 @@
-# Applied Project Minor Dissertation
+# Applied Project and Minor Dissertation
 
-**Project Name:** MealPrepPro\
-**Student:** Emmanuel Osabuehien (G00373559)\
-**Supervisor:** Joseph Corr
+## Contents
 
-## Introduction
-This repository exists to contain the source code and files for the front end and back end of my meal planning application in MERN and my project dissertation.
+* [Project Details](#details)
+* [Introduction](#intro)
+* [Overview](#overview)
+* [Software Requirements](#requirements) 
+* [Technologies](#tech)
+* [Software Features](#features)
+* [Deployment](#deploy)
+* [Repository Structure](#preview)
+* [Demo](#demo)
+* [Dissertation](#dissertation)
+* [Conclusion](#conclusion)
+* [References](#references)
 
-This repository will also contain a video that gives both a precise overview and demo of the application.
+## Project Details<a name = "details"></a>
 
+| Project Details   |     |
+| --- | --- |
+| **Title** | MealPrepPro  |
+| **College** | Galway-Mayo Institute of Technology|
+| **Course** | BSc (Hons) in Computing in Software Development  |
+| **Module** |  Applied Project and Minor Dissertation |
+| **Student** | Emmanuel Osabuehien (G00373559) |
+| **Supervisor** | Joseph Corr |
+
+## Introduction<a name = "intro"></a>
+
+## Overview<a name = "overview"></a>
+
+## Software Requirements<a name = "requirements"></a>
+
+## Technologies<a name = "tech"></a>
+
+## Software Features<a name = "features"></a>
+
+## Deployment<a name = "deploy"></a>
+
+## Repository Structure<a name = "structure"></a>
+
+## Demo<a name = "demo"></a>
+
+## Dissertation<a name = "dissertation"></a>
+
+## Conclusion<a name = "conclusion"></a>
+
+## References<a name = "references"></a>
