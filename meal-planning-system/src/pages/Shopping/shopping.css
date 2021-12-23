@@ -11,7 +11,7 @@ body {
 }
 
 .app-background {
-  background-color: #bee3ff;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
