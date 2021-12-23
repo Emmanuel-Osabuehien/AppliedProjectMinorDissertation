@@ -9,7 +9,7 @@
 * [Technologies](#tech)
 * [Software Features](#features)
 * [Deployment](#deploy)
-* [Repository Structure](#preview)
+* [Repository Structure](#repo)
 * [Demo](#demo)
 * [Dissertation](#dissertation)
 * [Conclusion](#conclusion)
@@ -38,7 +38,7 @@
 
 ## Deployment<a name = "deploy"></a>
 
-## Repository Structure<a name = "structure"></a>
+## Repository Structure<a name = "repo"></a>
 
 ## Demo<a name = "demo"></a>
 
