@@ -40,12 +40,15 @@ function AppNavbar() {
             </Nav>
           )}
           {user && (
-          <>
-          <LinkContainer to="/my-meals">
+            <>
+              <LinkContainer to="/">
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>{" "}
+              <LinkContainer to="/my-meals">
                 <Nav.Link>Meals</Nav.Link>
               </LinkContainer>{" "}
               <LinkContainer to="/bmi">
-                <Nav.Link>BMI</Nav.Link>
+                <Nav.Link>BMR</Nav.Link>
               </LinkContainer>{" "}
               <LinkContainer to="/shopping">
                 <Nav.Link>Shopping List</Nav.Link>
@@ -53,8 +56,8 @@ function AppNavbar() {
               <LinkContainer to="/requirements">
                 <Nav.Link>Requirements</Nav.Link>
               </LinkContainer>{" "}
-          <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
-          </>
+              <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+            </>
           )}
         </Navbar.Collapse>
       </Container>

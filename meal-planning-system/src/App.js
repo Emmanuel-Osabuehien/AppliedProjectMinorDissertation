@@ -17,28 +17,28 @@ function App() {
 
   const { user, setUser } = useContext(MyContext);
   useEffect(() => {
-    axios.post("/auto-login").then(({data}) => setUser(data))
+    axios.post("/auto-login").then(({ data }) => setUser(data))
   }, [])
 
   return (
     <Router>
       <AppNavbar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          {!user && (
-            <Switch>
-              <Route exact path="/login">
-                <Login />
-              </Route>
-              <Route exact path="/register">
-                <SignUp />
-              </Route>
-            </Switch>
-          )}
-          {user && (
-            <Switch>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        {!user && (
+          <Switch>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/register">
+              <SignUp />
+            </Route>
+          </Switch>
+        )}
+        {user && (
+          <Switch>
             <Route exact path="/my-meals">
               <Favorites />
             </Route>
@@ -51,13 +51,13 @@ function App() {
             <Route exact path="/requirements">
               <RequirementsPage />
             </Route>
-            </Switch>
-          )}
-          <Route>
-            <ErrorPage />
-          </Route>
-        </Switch>
-     </Router>
+          </Switch>
+        )}
+        <Route>
+          <ErrorPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
