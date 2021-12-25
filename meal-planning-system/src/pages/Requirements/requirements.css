@@ -12,6 +12,16 @@
   font-size: calc(10px + 2vmin);
 }
 
+.Borders {
+  border: solid;
+  border-width: thick;
+}
+
+.Captions {
+  color: black;
+  font-weight: bold;
+}
+
 .GFG {
   text-decoration: none;
   color: black;

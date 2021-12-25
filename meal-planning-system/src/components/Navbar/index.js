@@ -21,7 +21,7 @@ function AppNavbar() {
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand href="#home">
-            MealPrepPro
+            FastTrack
     </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

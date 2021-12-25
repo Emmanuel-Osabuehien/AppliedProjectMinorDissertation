@@ -7,7 +7,8 @@ function RequirementsPage() {
   return (
 
     <Table className="Graphs" bordered hover size="sm">
-      <tbody>
+     <caption className="Captions">Choose Diet From List</caption>
+      <tbody className="Borders">
         <tr>
           <td>
             <a href="https://www.healthline.com/health/balanced-diet" className="GFG"><h5 className="mt-2">Balanced Diet</h5></a>
