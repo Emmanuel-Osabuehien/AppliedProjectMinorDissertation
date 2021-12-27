@@ -19,7 +19,7 @@
 
 | Project Details   |     |
 | --- | --- |
-| **Title** | MealPrepPro  |
+| **Title** | FastTrack  |
 | **College** | Galway-Mayo Institute of Technology|
 | **Course** | BSc (Hons) in Computing in Software Development  |
 | **Module** |  Applied Project and Minor Dissertation |
