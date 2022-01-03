@@ -28,7 +28,7 @@
 
 ## Introduction<a name = "intro"></a>
 
-Hello, this repository exists to contain the files necessary for my Meal Planning Web Application built using MongoDB, ExpressJS, ReactJS and NodeJS and my dissertation. 
+Hello, this repository exists to contain the files necessary for my Meal Planning Web Application built using MongoDB, ExpressJS, ReactJS and NodeJS and my dissertation developed using Latex. 
 
 ## Overview<a name = "overview"></a>
 
@@ -80,7 +80,41 @@ This is a Meal Planning Web Application which was developed using a MERN Stack (
 
 ## Software Features<a name = "features"></a>
 
+The Main Features Of Our App Include:
+
+* Users can create an account.
+* Users can log into a registered account.
+* Users can search for meals in system.
+* Users can view details such as instructions and ingredients of meals in the system.
+* When logged in, users can add meals to a listing page.
+* When logged in, users can delete meals from a listing page.
+* When logged in, users can add/delete items from their own personal, customized shopping list.
+* When logged in, users can view various diets provided in the application.
+* When logged in, users can calculate their BMI (Basic Metabolic Rate) and calories that are needed which is based on the users personal details such as height, weight, gender, etc.
+
 ## Deployment<a name = "deploy"></a>
+
+1) Download All The Software Requirements Listed Above.
+2) Download The Zip File Of This Repository.
+3) Alternatively You Can Clone This Repository Using The Command:
+```bash
+git clone
+```
+4) Navigate Into 'meal-planning-system' Folder Of The Repostory.
+5) Install All The React Libraries In Our Project Using The Command:
+```bash
+npm install
+```
+6) Deploy The Front End Of Our Application Using The Command:
+```bash
+npm start
+```
+7) Navigate Into 'backend' Folder In Our 'meal-planning-system' Folder Of The Repostory.
+8) Deploy The Back End Of Our Application Using The Command:
+```bash
+node server.js
+```
+9) The Project Should Automatically Open The Project Browser, If Not You Can Mnaually Open The Browser By Entering The Url Of The React App `http://localhost:3000/`.
 
 ## Repository Structure<a name = "repo"></a>
 
