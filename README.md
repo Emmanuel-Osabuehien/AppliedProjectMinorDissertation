@@ -120,7 +120,7 @@ node server.js
 
 - meal-planning-system: This folder contains the contents for both the front end and back end of my web application.
 - LICENSE: This file is an open source license which allows other people to contribute to the repository.
-- READNE.md: This is a text file containing information used to introduce and explain the project, the README.md explains questions such as why this repository exists, what is in it and how to run the project.
+- README.md: This is a text file containing information used to introduce and explain the project, the README.md explains questions such as why this repository exists, what is in it and how to run the project.
 
 ## Demo<a name = "demo"></a>
 
