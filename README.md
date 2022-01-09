@@ -12,6 +12,7 @@
 * [Repository Structure](#repo)
 * [Demo](#demo)
 * [Dissertation](#dissertation)
+* [Sprints](#sprints)
 * [Conclusion](#conclusion)
 * [References](#references)
 
@@ -118,14 +119,31 @@ node server.js
 
 ## Repository Structure<a name = "repo"></a>
 
-- meal-planning-system: This folder contains the contents for both the front end and back end of my web application.
-- LICENSE: This file is an open source license which allows other people to contribute to the repository.
-- README.md: This is a text file containing information used to introduce and explain the project, the README.md explains questions such as why this repository exists, what is in it and how to run the project.
+* __meal-planning-system__: This folder contains the contents for both the front end and back end of my web application.
+* __dissertation__: This folder contains the contents for the accompanying dissertation for my project.
+* __LICENSE__: This file is an open source license which allows other people to contribute to the repository.
+* __README.md__: This is a text file containing information used to introduce and explain the project, the README.md explains questions such as why this repository exists, what is in it and how to run the project.
 
 ## Demo<a name = "demo"></a>
 
+Click here to view a quick demonstration of the application with a rundown of the project code and repository:
+
 ## Dissertation<a name = "dissertation"></a>
 
+Click here to view the PDF of of my accompanying dissertation during the development of the application:
+
+## Sprints<a name = "sprints"></a>
+
 ## Conclusion<a name = "conclusion"></a>
+
+- I have created a meal planning application.
+- The application allows users to search for meals using RESTful API.
+- The application requires users to register an account and log in to use key features.
+- The application utilizes CRUD (Create, Read, Update and Delete) functionality.
+- The application allows users to calculate their daily BMR (Basic Metabolic Rate) and the calories needed to be consumed in a day.
+- The application provides users with charts providing nutrional education regrading various diets.
+- Agile Methodology e.g. Scrum was used during the development of the application where I used two week sprints to implement a list of tasks to be completed.
+- A dissertation is provided to document the developmental process of the application.
+- To view a more clear, concise conclusion of the application view the accompanying dissertation and refer to the sections 'System Evaluation' and 'Conclusion'.
 
 ## References<a name = "references"></a>
