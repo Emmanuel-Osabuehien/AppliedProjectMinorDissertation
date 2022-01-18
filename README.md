@@ -134,6 +134,71 @@ Click here to view the PDF of of my accompanying dissertation during the develop
 
 ## Sprints<a name = "sprints"></a>
 
+- **Sprint 1 (18th October 2021 - 1st November 2021)**: 
+    - Create GitHub Repository
+    - Research MERN Stack (MongoDB, ExpressJS, ReactJS, NodeJS)
+    - Create MongoDB Database
+    - Deploy Front End Of Application
+    - Deploy Back End Of Application
+    - Create Dashboard Page
+    - Create 404 Error Page
+    - Create Blank Latex Project For Dissertation
+
+- **Sprint 2 (1st November 2021 - 15th November 2021)**:
+    - Create Register Page
+    - Create Login Page
+    - Perform Register Functionality
+    - Perform Login/Logout Functionality
+    - Integrate Database
+    - Create User Schema
+    - Create Add User Router
+    - Apply Encrypted Password To User Details
+    - Write 'Introduction' Section Of Dissertation
+    - Test Code
+
+- **Sprint 3 (15th November 2021 - 29th November 2021)**:
+    - Create Meal Landing Page
+    - Set Up Backend Restful API
+    - Perform Fetch A Meal Functionality
+    - Perform Fetch All Meals Functionality
+    - Create Get Meal Router
+    - Write 'Context' Section Of Dissertation
+    - Test Code
+
+- **Sprint 4 (29th November 2021 - 13th December 2021)**:
+    - Create Meal Listing Page
+    - Perform Add Meal Functionality
+    - Perform Delete Meal Functionality
+    - Create Add Meal Router
+    - Create Delete Meal Router
+    - Write 'Methodology' Section Of Dissertation
+    - Test Code
+
+- **Sprint 5 (13th December 2021 - 27th December 2021)**:
+    - Create Shopping List Page
+    - Perform Add Ingredient Functionality
+    - Perform Update Ingredient Functionality
+    - Perform Delete Ingredient Functionality
+    - Create Ingreidients Schema
+    - Create Add Ingredient Router
+    - Test Code
+
+- **Sprint 6 (27th December 2021 - 10th January 2022)**:
+    - Create Dietary Requirements Page
+    - Integrate Graphs/Charts Based On Meal Diets
+    - Stylize Graphs/Charts Into HTML Table
+    - Add Hyperlinks Navigating Users To Diet Information Sites
+    - Test Code
+
+- **Sprint 7 (10th January 2022 - 24th January 2022)**:
+    - Create BMR/Calories Page
+    - Add BMR/Calories Needed Calculator
+    - Add User Details To Calculator (Gender, Age, Height, Weight, Physical Activity)
+    - Perform Calculate BMR (Basal Metabolic Rate) Functionality
+    - Perform Calculate Calories Needed Functionality
+    - Write First Half Of 'Technology Review' Section Of Dissertation
+    - Test Code
+
 ## Conclusion<a name = "conclusion"></a>
 
 - I have created a meal planning application.
@@ -147,3 +212,23 @@ Click here to view the PDF of of my accompanying dissertation during the develop
 - To view a more clear, concise conclusion of the application view the accompanying dissertation and refer to the sections 'System Evaluation' and 'Conclusion'.
 
 ## References<a name = "references"></a>
+
+[1] - https://nodejs.org/en/docs/
+
+[2] - https://reactjs.org/docs/getting-started.html
+
+[3] - https://expressjs.com/
+
+[4] - https://docs.mongodb.com/
+
+[5] - https://www.w3schools.com/nodejs/nodejs_intro.asp
+
+[6] - https://www.c-sharpcorner.com/article/what-and-why-reactjs/
+
+[7] - https://www.besanttechnologies.com/what-is-expressjs
+
+[8] - https://www.guru99.com/what-is-mongodb.html
+
+[9] - https://idratherbewriting.com/learnapidoc/
+
+[10] - https://www.dcu.ie/engineeringandcomputing/final-year-projects-expo-2021
