@@ -232,3 +232,13 @@ Click here to view the PDF of of my accompanying dissertation during the develop
 [9] - https://idratherbewriting.com/learnapidoc/
 
 [10] - https://www.dcu.ie/engineeringandcomputing/final-year-projects-expo-2021
+
+[11] - K. Chodorow, *MongoDB: the definitive guide: powerful and scalable data storage*, Newton, MA: O'Reilly Media, Inc, 2013
+
+[12] - A. Mardan, *Express. js Guide: The Comprehensive Book on Express. js*, Berkeley, CA.: Springer, 2014
+
+[13] - B. J. D'Mello, J. Krol and M. Satheesh, *Web development with MongoDB and NodeJs*, Birmingham, UK: Packt Publishing Ltd, 2015
+
+[14] - P. Sonpatki and A.M. Vipul, *ReactJS by Example-Building Modern Web Applications with React*, Birmingham, UK: Packt Publishing Ltd, 2016
+
+[15] - S. Hoque, *Full-Stack React Projects: Learn MERN stack development by building modern web apps using MongoDB, Express, React, and Node. js*, Birmingham, UK: Packt Publishing Ltd, 2020
