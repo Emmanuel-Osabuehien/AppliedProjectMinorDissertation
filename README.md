@@ -199,6 +199,12 @@ Click here to view the PDF of of my accompanying dissertation during the develop
     - Write First Half Of 'Technology Review' Section Of Dissertation
     - Test Code
 
+- **Sprint 7 (24th January 2022 - 7th February 2022)**:
+    - Add CSS Styling To All Web Pages
+    - Brainstorm New Features To Add To Application
+    - Finish Second Half Of 'Technology Review' Section Of Dissertation
+    - Test Code   
+
 ## Conclusion<a name = "conclusion"></a>
 
 - I have created a meal planning application.
