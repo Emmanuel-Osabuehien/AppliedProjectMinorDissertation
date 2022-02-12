@@ -75,6 +75,7 @@ This is a Meal Planning Web Application which was developed using a MERN Stack (
     - NodeJs
 
 - **Development Software**: 
+    - Atom
     - Git 
     - Postman
     - Visual Studio Code   
@@ -199,7 +200,7 @@ Click here to view the PDF of of my accompanying dissertation during the develop
     - Write First Half Of 'Technology Review' Section Of Dissertation
     - Test Code
 
-- **Sprint 7 (24th January 2022 - 7th February 2022)**:
+- **Sprint 8 (24th January 2022 - 7th February 2022)**:
     - Add CSS Styling To All Web Pages
     - Brainstorm New Features To Add To Application
     - Finish Second Half Of 'Technology Review' Section Of Dissertation
