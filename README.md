@@ -204,7 +204,12 @@ Click here to view the PDF of of my accompanying dissertation during the develop
     - Add CSS Styling To All Web Pages
     - Brainstorm New Features To Add To Application
     - Finish Second Half Of 'Technology Review' Section Of Dissertation
-    - Test Code   
+    - Test Code  
+
+- **Sprint 9 (7th February 2022 - 21st February 2022)**:
+    - Fix Security Vulnerabilities In Dependancies
+    - Finish Second Half Of 'System Design' Section Of Dissertation
+    - Test Code    
 
 ## Conclusion<a name = "conclusion"></a>
 
