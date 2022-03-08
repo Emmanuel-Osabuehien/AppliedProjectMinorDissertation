@@ -749,7 +749,19 @@ The reason I used BibTex was mainly due to the different styling I can use to fo
 \section{Overview}
 
 In this chapter, I will give a quick overview on the front end, back end, database and REST architecture if my application, as well as the application features and functions.\\ \\
-During the process of creation my application, as previously mentioned in the 'Technology Review' chapter, I set out a list of features, components and functions before I started the coding process of my application that I wanted my application to fulfill by the time of completion, which sometimes I added to during the developmental process of my application.
+During the process of creation my application, as previously mentioned in the 'Technology Review' chapter, I set out a list of features, components and functions before I started the coding process of my application that I wanted my application to fulfill by the time of completion, which sometimes I added to during the developmental process of my application.\\ \\
+Here we look at the design process of both the front end and back end architecture of the application as well as looking at how it may differ from standard meal planning applications.\\ \\
+This app is a single-page application opposed to a multi-page application, I choose to use a single-page application because:
+
+\begin{itemize}
+    \item Easier debugging
+    \item User Experience
+    \item Less complex implementation
+    \item Better caching
+\end{itemize}
+
+The client side is written in JavaScript, HTML and CSS as all these languages give the application an appealing universal appearance.\\ \\
+The server side is written in NodeJS and ExpressJS as these provide libraries and frameworks which allow us to use a variety of attributes and features.
 
 \section{Client Side}
 
@@ -757,25 +769,47 @@ In this section, I will discuss the components regarding the front end of my web
 
 \subsection{Home}
 
+When the application is first deployed the user is brought straight to home (dashboard). The page contains a number of the components that we are going to discuss later in more detail such as the Meal Listing, the Search Bar and the Jumbotron. This page is also what we use to set the standard for our user interface to give an idea into what is going to be the design for app and whether this design is good enough to give the app a universal look. Similar to all the other pages, the home page also contains the navigation bar which we will use to navigate across all the accompanied pages. The Home page is also the only page that is provided for both registered and unregistered users.
+
 \subsection{Register}
+
+When the register component is selected, if a user wants to progress further in the application to use any of the other components or features then the user must register in our application, they will only need to provide an email and password for a successful registration. Once a user complete the registration process and the user has logged into the application then can proceed and use all the features that the application provides including adding and removing recipes from a listing page. using the BMR/calories needed calculator, forming a personal ingredients list and researching various diets provided by the application. The registration component consists of a clear white background featuring two form boxes to enter your email and password and a sign up button. If a user enters an incorrect email format they can register and are asked to submit an official email with the proper format.
 
 \subsection{Login}
 
-\subsection{Meal Listing}
+As discussed in the 'Register' section, if a user want to use all the components and features that the application provides then they have to register and log in with a provided email and password. The component is a simple login page with a clear white background featuring two form boxes to enter your email and password and a log in button to process your credentials similar to the registration format, if the credential are correct then they are automatically logged in and have access to all components in the application but if the credentials are invalid they are sent an error message and are encouraged to enter correct details 
 
 \subsection{Meal Landing}
 
+The Meal Landing component consists of a list of meals (recipes) that has been pulled from the API that I used (TheMealDB API) and after the data has been fetched, the meals are then displayed and formatted in a HTML modal and card format to enhance the user interface of the app. On the card, the title of the meal, the id and the cooking method, when users can interact with the cards by clicking the 'See More' button on the card which where you are given two buttons, the first button is to exit this card viewing and the second is to add this selected meal to a meal listing page where you can view in more detail. Once you select the button to add the meal to the listing, straightaway the button is changed to remove the meal from the listing which when you click the meal is then removed from that same listing page, when you navigate to the meal listing component you can view all the meals that you have added. The meal landing page also changes when you use the search functionality in the dashboard component, when you type and search for a specific word, only the meals with a title that matches will appear in the landing component.
+
+\subsection{Meal Listing}
+
+The Meal Listing component is connected to the CRUD functionality of the meal landing component as the meal landing components allows users to add and remove (recipes) to the meal listing component, when a meal is added to the meal listing component, the meal is displayed in the exact same format as it is displayed in the meal landing component using the HTML card, modal and button and users can also add and remove meals from the meal listing as well. The meals added to this component are stored in the database document for the registered user and when it is removed it will be deleted from the database document.
+
 \subsection{Calories Calculator}
+
+The Calories Calculator component is a calculator where users can calculate either their BMR (Basic Metabolic Rate) and the amount of calories the users needed based on the users details. When the user enters the page containing the component, the page consists of solely the calculator and when the users views and wished to use the calculator they must enter in specific details that calculator used to calculate the metabolic rate and calories needed, these details include the users age, gender, weight (in pounds), height (feet and inches) and their activity level. When all these details are entered the user is presented with two separate buttons, one button to 'Calculate BMR' which takes in the details entered and calculates the basic metabolic rate of the user based on these details and the other button to 'Calculate Calories Needed' takes in the details entered and calculated the amount of calories the users needs to consume in a day based on these details.
 
 \subsection{Shopping List}
 
-\subsection{Requirements}
+The Shopping List component is a page where users can sort out a shopping list for themselves. It consists of a react table where users can organize their personal shopping/ingredients list where the user can view for later use. The shopping list is divided into two columns 'item name' and quantity, when the user adds an item it is then added to a total that adds up the quantity of items added to the list and is printed to the bottom of the table. After an item is collected the user can actually cross that item off the list by clicking a checkbox that sits beside each item on the list.
 
-\subsection{404}
+\subsection{Dietary Requirements}
+
+The Dietary Requirements component is a page of the application where users can research various dietary information of diets that the application provides. The page consists of a HTML table that contains various diet plans, for example a vegetarian diet, ketogenic diet and paleo diet. Each table consists of pie chart containing the percentage of protein, fats, carbohydrates and fruits/vegetables the user must follow for this specific diet as well as a hyperlink where user can gain more information of every diet.
 
 \subsection{Navigation Bar}
 
+The Navigation Bar component is at the top of each page as you navigate throughout the application, the navigation bar component contains all the hyperlinks to all the other pages that consists of the application, this navigation bar allows the user to navigate and move to all the different pages of the application. If the user is unregistered, the only pages they can navigate to are the 'Home', Register' and 'Log In' pages and when the user is registered the pages the user can navigate to are 'Home', 'Meal Listing', 'Shopping List', 'Requirements', 'Calories Calculator' and 'Logout'.
+
 \subsection{Jumbotron}
+
+The Jumbotron component is a simple HTML jumbotron that we use in our home (dashboard) page, the component contains a background image and a search bar for the meal landing component, where users can search for specific meals (recipes) based on the string of characters the user has added in the search bar, after the user clicks the search button then only meals matching the string of characters are displayed on the page.
+
+\subsection{404}
+
+the 404 component is an error page for the application where any 404 (Not Found) client-side errors are handled. If a user attempts to enter an address of the application that does not exist or when a request is not found, the user will be redirected to this very page where the an error message is displayed. 
 
 \section{Server Side}
 
@@ -783,19 +817,96 @@ In this section, I will discuss the libraries and frameworks used to develop the
 
 \subsection{ExpressJS}
 
+ExpressJS is server-side, back end web application framework that is used for NodeJS needed to write simple and secure applications. ExpressJS is essential as it provides easy routing for requests sent by clients and provides middleware needed to make decisions to give correct responses for requests sent. There is also the advantage of formatting the data into a JSON-esque format, making it easy for users to read.
+
 \subsection{NodeJS}
+
+NodeJS is a open source, cross platform back end JavaScript run time environment, running the JavaScript code outward of the browser. NodeJS was essential in building the back end (server side) of my application as it provided features making it simple to understand and use. As I previously mentioned it is cross-platform meaning it can be used by many different languages which helped when using which is also an advantage.
 
 \subsection{Mongoose}
 
-\section{User Interface}
+Mongoose is a JavaScript library that creates a connection between MongoDB and the Express web application framework. Mongoose was essential in using my CRUD (create, read, update and delete) operations as well as developing my database schemas and also in performing search functionality by finding data using an 'id' parameter.
 
-In this section, I will discuss how I designed and Why I chose the the user interface of my application.
+\begin{minted}{JavaScript}
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const userSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  token: {
+    type: String
+  },
+
+  favorites: {
+    type: [String]
+  }
+})
+
+userSchema.pre('save', async function (next) {
+  const user = this;
+  if (user.isModified('password')) {
+    user.password = await bcrypt.hashSync(user.password, 10);
+  }
+  next();
+})
+
+userSchema.statics.findByCredentials = async function (email, password) {
+  const user = await User.findOne({email});
+  if(!user) {
+    throw new Error('Invalid Credentials')
+  }
+  const passwordMatch = await bcrypt.compareSync(password, user.password)
+  if(!passwordMatch) {
+    throw new Error('Invalid Credentials')
+  }
+  return user;
+}
+
+userSchema.methods.generateToken = async function() {
+  const user = this;
+  const token = await jwt.sign({_id: user._id}, 
+  "mealsSecret", {expiresIn: "365d"});
+  user.token = token;
+  await user.save();
+  return token;
+}
+
+userSchema.methods.toJSON = function() {
+  const user = this;
+  const userObject = user.toObject();
+  delete userObject.password;
+  delete userObject._id;
+  return userObject;
+  
+}
+
+const User = mongoose.model('User', userSchema);
+module.exports = User
+\end{minted}
+
+\section{User Interface and User Experience}
+In this section, I will discuss how I designed, why I chose the the user interface of my application and discuss how I tested the user experience of my application.
+
+\subsection{Evaluation}
+
+The User Experience, sometimes referred to as the 'UX' or 'UE' is the design process of what the experience will be with how users interact with a select product, service or system. This process is typically followed by all or a majority of companies and design teams when a product, service or system has been developed to test a user or customers satisfaction with said product, service or system regarding usability, functionality and user interface. User Experience is a mixture of statistical study, product design and development, and strategies. User Experience is obviously always going to be personal and subjective as a certain user may be satisfied with a product, service or system for specific reasons while another user may now for those same reasons or for other reasons.\\ \\
+To user experience of the application is necessary as most application in this field are either not aesthetically pleasing or too complicated for users to understand. In the evaluation process of my user experience, I presented my application to a select few people, experienced software engineers, graduate students and users of apps in this same field, where I collected data and information based on how they felt about using the app and if there was any changes they would make with their overall experience in using the application, any changes were written down and taken into consideration on whether I would make later changes during the development process of the application.
 
 \section{Database}
 
 In this section, I will discuss how I set up and implemented the database(s) of my application.
 
-\subsection{MongoDB}
+\subsection{MongoDB Atlas}
+
+MongoDB Atlas as previously discussed, is a free, multi-cloud, database service that I used to develop my database schema for my database and store all the collection of data from my application, this data included information such as user details (emails and passwords), meals and ingredients. This was set up on the server side of my application and used Bcrypt to encrypt specific information in our database. Application as popular as Facebook, Twitter and Google all use MongoDB Atlas for this very purpose. I discussed earlier why I decided to use MongoDB Atlas for specific reasons such as scalability, accessibility and due to it's high performance level for large scale application.
 
 \section{Architectural Styles and Patterns}
 
@@ -803,11 +914,60 @@ In this section, I will discuss the architectural styles or patterns, how I impl
 
 \subsection{REST}
 
-\section{Hashing}
+To ensure that my application met all the RESTful architecture constraints and guidelines that were required, I'll explain how I approached each constraint as follows:
+
+\begin{itemize}
+    \item \textbf{Uniform Interface:} To ensure that this constraint was followed, as explained before I used HTML and CSS to design the interface of my application. I ensured that each HTML and CSS class that I used for all the components all matched.
+    \item \textbf{Client-Server:} To ensure that this constraint was followed, I used Axios which is a promise-based HTTP Client for NodeJS and the browser, this allowed me to send a message (GET, POST, DELETE, etc.) from the server to the client and in return the server will receive a message response from the client and both the server and the client acted independent from one another.
+    \item \textbf{Stateless:} To ensure that this constraint was followed, I used JSON Web Token which is a proposed internet standard for share security information between the client and a server. This allowed the user to store and secure all information from messages sent and received in the event of the server crashing or failing. JSON Web Token also worked in conjunction with Axios to perform this task. 
+    \item \textbf{Cacheable:} To ensure that this constraint was followed, as I mentioned before I used JSON Web Token to work with Axios which allowed me to send, edit and receive information as well as securing the system and processes.
+    \item \textbf{Layered System:} To ensure that this constraint was followed, I followed the guidelines and create a layered system, creating a three layered system, the first layer we deployed our API (TheMealDB API) using CORS, the second layer we used to store data using JSON Web Token and the third layer we used to authenticate requests using Axios.
+\end{itemize}
+
+\section{Encryption}
 
 In this section, I will discuss how I set up the hashing password function for the user details in the User database schema for my application.
 
 \subsection{Bcrypt}
+
+To protect user details and information I used the JavaScript library 'Bcrypt', this library provides a password-hashing function which we used to encrypt all users password that have registered to the application, this encryption is generated as soon as the user enters their details in the registration form. I applied this as most application nowadays provide security features to prevent an attack by any unwelcome users and to create an application that follows the government cyber security guidelines.
+
+\begin{minted}{JavaScript}
+userSchema.pre('save', async function (next) {
+  const user = this;
+  if (user.isModified('password')) {
+    user.password = await bcrypt.hashSync(user.password, 10);
+  }
+  next();
+})
+
+userSchema.statics.findByCredentials = async function (email, password) {
+  const user = await User.findOne({email});
+  if(!user) {
+    throw new Error('Invalid Credentials')
+  }
+  const passwordMatch = await bcrypt.compareSync(password, user.password)
+  if(!passwordMatch) {
+    throw new Error('Invalid Credentials')
+  }
+  return user;
+}
+\end{minted}
+
+\subsection{JSON Web Token}
+
+To ensure all connections to the application are secure I used JSON Web Token which is known as the proposed internet standard for creating data. JSON Web Token generates tokens that provide a private secret or public/private key. For example. If the client has logged into the application, the server will generate a token which the client can the use to prove that their connection to ther server is legitimate.
+
+\begin{minted}{JavaScript}
+userSchema.methods.generateToken = async function() {
+  const user = this;
+  const token = await jwt.sign({_id: user._id}, "mealsSecret", 
+  {expiresIn: "365d"});
+  user.token = token;
+  await user.save();
+  return token;
+}
+\end{minted}
 
 \chapter{System Evaluation}
 
