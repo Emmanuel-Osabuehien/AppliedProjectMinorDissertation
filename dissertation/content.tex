@@ -425,7 +425,7 @@ During the process of creation my application, I set up a list of features, comp
 
 \section{MERN Stack}
 
-In this section, I will discuss the technologies MongoDB, ExpressJS, ReactJS and NodeJS.\\ \\
+In this section, I will discuss the technologies MongoDB, ExpressJS, ReactJS and NodeJS.
 
 \subsection{MongoDB}
 
@@ -976,47 +976,107 @@ userSchema.methods.generateToken = async function() {
 In this section, I will give a quick overview on my evaluation of my project against the objective I set out for myself in the 'Introduction'.\\ \\
 During the process of creation my application, as previously mentioned in the 'Introduction' chapter, I crafted the key objectives I set out for myself to follow and accomplish.
 
-\section{Behavior and Robustness}
+\section{Behavior, Robustness and Structure}
 
-In this section, I will discuss how I tested the behavior and robustness of my web application.\\ \\
+In this section, I will discuss how I tested the behavior and robustness of my web application.
+
+\subsection{Testing}
+
+For this project, I used two different types of testing to develop this application, Unit Testing and Acceptance Testing. The unit testing was utilized to verify the code and notify us if it is failing and acceptance testing tells you whether your code is working and complete. I used the two different types of testing framework (Selenium and Unit.js), during the development I discovered there was undetected bugs in my code coming from the software being outdated. Both Selenium and Unit.js proved extremely useful as during this development as every time I added new code to my application, these tests ensured that this code always worked intended.
+
+\subsection{Stability}
+
+Stability in terms of applications is the measurement of application health and user experience. App stability can be measured in two general ways: either as a percentage of app sessions that don't crash or encounter an unhandled exception, or as the percentage of regular daily users who do not experience an error. I have tested the application vigorously to ensure that the app is always stable, when the app seemed to be even slightly unstable, I pinpointed what the issue may be by running tests and attempted to solve the problem. The application isn't completely free of errors as there are only a few errors that the application runs into at time including:
+
+\begin{itemize}
+    \item The total of the shopping list component won't always update on the first attempt but when it is updated a second time it will work just fine.
+    \item Users may have to click the log in button multiple times when logging in but this has issue has only occured on very few occasions.
+\end{itemize}
+
+It is rare to find large scale applications that are free of all bugs and even with these small errors in my application, this app still runs and functions as intended and maintains it's stability.
 
 \section{Performance Benchmarks}
 
-In this section, I will discuss how I measured the performance of a my application against other application in the same field.\\ \\
+In this section, I will discuss how I measured the performance of a my application against other application in the same field.
+
+\subsection{Scope}
+
+The scope refers to requirements specified to achieve the end result specifically what the project is to accomplish and a description of what the end result should be or accomplish. The main part regrading the scope of the application is the software quality, the quality is connected to the time invested into the application as the amount of time invested in specific tasks set out to complete will define the overall quality of the product, certain tasks will take longer than other to complete but this may mean this task will be completed exceptionally. I created a single page, large scale application meaning the scope of the project was quite big and a large number of tasks had to be completed.
+
+\subsection{Time}
+
+I considered many different techniques to produce my product in an estimated time period, the method I chose to go with is using Agile Methodology using Atlassian to set up two week sprints to identify tasks needed to produce the deliverables documented, I broke down the tasks needed to be carried out by referring to the key objectives I set out for myself and then set up these sprints before I started developing the application so I had a list of tasks, the tasks are also prioritized, dependencies between tasks are identified, and this information is documented in a project schedule. Once the two week period was up for the sprint was up, I reviewed all the tasks that were to be completed and checked if this select task was complete to ensure the product was fully developed in an estimated time period, I set up eight sprints in regard to developing my application (all other sprints were in regard to my dissertation) meaning the estimated time period I set for myself was 4 months.
 
 \section{Outcomes}
 
-In this section, I will discuss how I measured the outcome of my application against the set objectives.\\ \\
+In this section, I will discuss how I measured the outcome of my application against the set objectives.
+
+\subsection{Multi-User Web Application}
+
+I have created a single-page, web application that can be accessed by multiple users simultaneously, I tested with other professionals that the application and all it's pages work as intended synchronously especially the API that I used as their were worries any client-server requests and responses regarding the API work across multiple machines. All pages and components fulfill their purpose while being accessed simultaneously, this is due to the use of JSON Web Token where JSON Web Token generate tokens that provide a private secret or public/private key for user sessions and one user will not affect another users session.
+
+\subsection{Functionality}
+
+The application achieves many of the functionality of the components that I set out for myself including:
+
+\begin{itemize}
+    \item The application performs CRUD functionality by adding, retrieving, editing and deleting meals from the users meal listing component.
+    \item The application provides a calories calculator calculates the user BMR (Basic Metabolic Rate) and calories needed based on the users details.
+    \item The application provides a shopping list component that also performs CRUD functionality where users can add, edit and delete ingredients that they need to purchase.
+    \item The application implements ChartJS where we created a table of charts where every chart represents the percentage of the total calories of different diets and a link to further information on each diet.
+\end{itemize}
+
+\subsection{Data Security}
+
+The application is password encrypted and user sessions are secured using both Bcrypt and JSON Web Token. User passwords are hashed by using Bcrypt which is a password-hashing function where as soon as a new user is registered into the application the password is automatically encrypted to prevent any cyber security attacks and follow modern guidelines. We have previously discussed the use of JSON Web Token as I implemented this to generate tokens that provide a private secret or public/private key for user sessions to ensure all information stored in a user session is not shared publicly.
+
+\subsection{REST}
+
+I followed all REST constraints when developing my application, the application has a uniform interface, the app is both stateless and cacheable, it is client-server independent and has a layered system. When CRUD (Create, Read, Update and Delete) is performed, all data is stored in our database (MongoDB). As we previously mentioned, the app is both stateless and cacheable, it is stateless as we used JSON Web Token the user to store and secure all information from messages sent and received in the event of the server crashing or failing and it is cacheable also using JSON Web Token and Axios to to send, edit and receive information as well as securing the system and processes.
 
 \section{Limitations}
 
-In this section, I will highlight any limitations or opportunities in my approach or in the technology I used.\\ \\
+In this section, I will highlight any limitations or opportunities in my approach or in the technology.
+
+\subsection{Performance}
+
+This is a large scale application and the application is connected to the web browser which in turns means the app size will increase, the impact of this can be seen in the performance of a web application as a large scale web application is slower than a native application. Web applications will possibly never replace mobile apps and it’s very likely that a web app will operate at a slightly slower speed than one that is hosted on a server locally. PWAs (progressive web applications) definitely try to mitigate this side effect, but there’s no veritable evidence that they have successfully eliminated this disadvantage altogether.
+
+\subsection{Updating}
+
+Continuously updating the software I was using became a limitation further down the line in the development of my application, as I was progressing with the development of my application, certain software that I used at the start of the Software Development Life Cycle (SDLC) would become outdated or become vulnerable to security issues which meant I would have to update the software but at the same time continuous updating could affect the code I was using as certain pieces of code could also become outdated and no longer used by this software. To solve this issue, I updated all the software that was outdated in a two week sprint and tested all the code afterwards, pinpointed any errors that were detected and researched the alternatives to replace this code to stick with the updated software.
+
+\subsection{Internet Dependence}
+
+This application is internet dependent and an internet connection is compulsory when running a web application which is very limiting in regards to most application nowadays and there are still many parts of the world where internet is not accessible, without a reliable internet connection you cannot either browse the web or run the application. Due to the software I was using, namely the MERN Stack (MongoDB, ExpressJS, ReactJS, NodeJS) there wasn't a way I could make this application non-internet dependent. 
 
 \chapter{Conclusion}
 
 \section{What Were The Learning Outcomes}
 
-In this section, I will discuss what I learned throughout the development of my application.\\ \\
+In this section, I will discuss what I learned throughout the development of my application.
 
 \section{What I Did Different}
 
-In this section, I will discuss how my application differs from meal planning applications nowadays.\\ \\
+In this section, I will discuss how my application differs from meal planning applications nowadays.
 
 \section{How Did Testing and Methodology Help}
 
-In this section, I will discuss how the addition of testing and methodology helped me throughout the development of my application.\\ \\
+In this section, I will discuss how the addition of testing and methodology helped me throughout the development of my application.
 
 \section{What Changes Would I Make}
 
-In this section, I will discuss if there are any changes I would have made to my application after now completing it.\\ \\
+In this section, I will discuss if there are any changes I would have made to my application after now completing it.
 
 \section{Summary}
 
-In this section, I will give a brief summary and some last words for this dissertation regarding my project.\\ \\
+In this section, I will give a brief summary and some last words for this dissertation regarding my project.
 
 \begin{appendices}
 \begin{itemize}
-\item \href{https://github.com/Emmanuel-Osabuehien/AppliedProjectMinorDissertation}{Click This Link To View The Code Of The Project On GitHub}
+\item \href{https://github.com/Emmanuel-Osabuehien/AppliedProjectMinorDissertation}{Click This Link To View GitHub Repository Used To Develop This Project}
+\item \href{https://github.com/Emmanuel-Osabuehien/AppliedProjectMinorDissertation/tree/main/meal-planning-system}{Click This Link To View The Source Code Of The Project On GitHub}
+\item \href{https://github.com/Emmanuel-Osabuehien/AppliedProjectMinorDissertation/tree/main/dissertation}{Click This Link To View The Dissertation Files On GitHub}
 \item \href{https://g00373559.atlassian.net/jira/software/projects/MPRO/boards/4}{Click This Link To View The Agile Board Used To Develop The Project}
 \end{itemize}
 \end{appendices}
