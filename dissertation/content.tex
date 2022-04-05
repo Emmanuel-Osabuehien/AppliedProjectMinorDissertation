@@ -2,10 +2,12 @@
 
 \chapter*{About this project}
 \paragraph{Abstract}
-A brief description of what the project is, in about two-hundred and fifty words.
+This project I developed as my final year project for the module Applied Project \& Minor Dissertation, the objective being to design a meal planning application using a MERN Stack (MongoDB, ExpressJS, ReactJS and NodeJS) where the application users should be able to register, log in, securing user accounts by encrypting user passwords, select meals to replicate, organize shopping lists, calculate BMR (Basic Metabolic Rate) and calories needed, and gather nutritional information on various diets.\\ \\
+My aim with this project is to build a multi-user, functioning web application that is safe and secure following cyber security guidelines and presenting the user with a professional and fun User Experience. The project uses MongoDB to store and sexure all user information from the user sessions. The project should also provide an attractive and accommodating User Interface where the users can easily navigate through without difficulty.\\ \\
+The goal I have with this project is to show the level of growth I have obtained as a Software Developer throughout my time in this course by learning and researching the depth of these technologies utilized. This project can be found in a GitHub Repository (there is a link in the Appendix section of this dissertation).
 
 \paragraph{Author}
-Emmanuel Osabuehien (G00373559)
+Hello, my name is \textbf{Emmanuel Osabuehien} (G00373559) and I am a Final Year student at Galway-Mayo Institute of Technology (GMIT).
 
 \chapter{Introduction}
 
@@ -35,14 +37,10 @@ A meal planning application is an app that you plan several weeks of meal plans/
 
 \subsection{History of meal planning}
 
-First, time devoted to cooking has decreased: in the United States, it has been reduced from 1:63 hour per day in 1965–1966 to 58 min in 2006–2007. Additionally, the source of food consumed has changed: people consume less food prepared at home, whereas foods prepared away from home represent an increasing part of the diet. \\ \\
-These studies highlighted that the consumption of food prepared away from home is associated with a lower quality diet and a higher body mass index, whereas benefits have been attributed to home-prepared food. \\ \\
-Previous research emphasized that individuals with lower cooking skills were more likely to consume away from home food such as ready meals or take-out meals from fast food or restaurants. \\ \\
-To face time pressure, a series of qualitative studies highlighted that parents resort to food choice coping strategies, such as meal simplification, taking out, or meal planning despite their potential impact on diet quality. \\ \\
-Among these strategies, time management skills and in particular meal planning, which consists in deciding ahead the foods that will be eaten in the next few days, has been previously suggested as a solution to balance competing time demands and reduce barriers to healthy dietary practices. \\ \\
-Studies performed on general populations showed that meal planning was positively associated with frequencies of home food preparation and family meal, as well as the presence of fruits for dinner. \\ \\
-In the present study, we hypothesize that meal planning might encourage home meal preparation, and therefore have beneficial effects on dietary quality and consequently on weight status. \\  \\
-Then, we investigated the relationships between meal planning and diet quality, based on adherence to nutritional guidelines, energy, macronutrients and food group intakes, as well as food variety.
+First, time devoted to cooking has decreased: in the United States, it has been reduced from 1:63 hour per day in 1965–1966 to 58 min in 2006–2007. Additionally, the source of food consumed has changed: people consume less food prepared at home, whereas foods prepared away from home represent an increasing part of the diet. These studies highlighted that the consumption of food prepared away from home is associated with a lower quality diet and a higher body mass index, whereas benefits have been attributed to home-prepared food. \\ \\
+Previous research emphasized that individuals with lower cooking skills were more likely to consume away from home food such as ready meals or take-out meals from fast food or restaurants. To face time pressure, a series of qualitative studies highlighted that parents resort to food choice coping strategies, such as meal simplification, taking out, or meal planning despite their potential impact on diet quality. \\ \\
+Among these strategies, time management skills and in particular meal planning, which consists in deciding ahead the foods that will be eaten in the next few days, has been previously suggested as a solution to balance competing time demands and reduce barriers to healthy dietary practices. Studies performed on general populations showed that meal planning was positively associated with frequencies of home food preparation and family meal, as well as the presence of fruits for dinner. \\ \\
+In the present study, we hypothesize that meal planning might encourage home meal preparation, and therefore have beneficial effects on dietary quality and consequently on weight status. Then, we investigated the relationships between meal planning and diet quality, based on adherence to nutritional guidelines, energy, macronutrients and food group intakes, as well as food variety.
 
 \subsection{Why am I making meal planning system?}
 
@@ -775,9 +773,25 @@ When the application is first deployed the user is brought straight to home (das
 
 When the register component is selected, if a user wants to progress further in the application to use any of the other components or features then the user must register in our application, they will only need to provide an email and password for a successful registration. Once a user complete the registration process and the user has logged into the application then can proceed and use all the features that the application provides including adding and removing recipes from a listing page. using the BMR/calories needed calculator, forming a personal ingredients list and researching various diets provided by the application. The registration component consists of a clear white background featuring two form boxes to enter your email and password and a sign up button. If a user enters an incorrect email format they can register and are asked to submit an official email with the proper format.
 
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/signup.png}
+    \caption{Register Page}
+    \label{fig: Image of Registration Page}
+  \end{figure}
+\end{center}
+
 \subsection{Login}
 
-As discussed in the 'Register' section, if a user want to use all the components and features that the application provides then they have to register and log in with a provided email and password. The component is a simple login page with a clear white background featuring two form boxes to enter your email and password and a log in button to process your credentials similar to the registration format, if the credential are correct then they are automatically logged in and have access to all components in the application but if the credentials are invalid they are sent an error message and are encouraged to enter correct details 
+As discussed in the 'Register' section, if a user want to use all the components and features that the application provides then they have to register and log in with a provided email and password. The component is a simple login page with a clear white background featuring two form boxes to enter your email and password and a log in button to process your credentials similar to the registration format, if the credential are correct then they are automatically logged in and have access to all components in the application but if the credentials are invalid they are sent an error message and are encouraged to enter correct details.
+
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/login.png}
+    \caption{Login Page}
+    \label{fig: Image of Login Page}
+  \end{figure}
+\end{center}
 
 \subsection{Meal Landing}
 
@@ -787,25 +801,73 @@ The Meal Landing component consists of a list of meals (recipes) that has been p
 
 The Meal Listing component is connected to the CRUD functionality of the meal landing component as the meal landing components allows users to add and remove (recipes) to the meal listing component, when a meal is added to the meal listing component, the meal is displayed in the exact same format as it is displayed in the meal landing component using the HTML card, modal and button and users can also add and remove meals from the meal listing as well. The meals added to this component are stored in the database document for the registered user and when it is removed it will be deleted from the database document.
 
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/meallist.png}
+    \caption{Mean Listing Page}
+    \label{fig: Image of Meal Listing Page}
+  \end{figure}
+\end{center}
+
 \subsection{Calories Calculator}
 
 The Calories Calculator component is a calculator where users can calculate either their BMR (Basic Metabolic Rate) and the amount of calories the users needed based on the users details. When the user enters the page containing the component, the page consists of solely the calculator and when the users views and wished to use the calculator they must enter in specific details that calculator used to calculate the metabolic rate and calories needed, these details include the users age, gender, weight (in pounds), height (feet and inches) and their activity level. When all these details are entered the user is presented with two separate buttons, one button to 'Calculate BMR' which takes in the details entered and calculates the basic metabolic rate of the user based on these details and the other button to 'Calculate Calories Needed' takes in the details entered and calculated the amount of calories the users needs to consume in a day based on these details.
+
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/bmrcalc.png}
+    \caption{Calories Calculator}
+    \label{fig: Image of Calories Calculator}
+  \end{figure}
+\end{center}
 
 \subsection{Shopping List}
 
 The Shopping List component is a page where users can sort out a shopping list for themselves. It consists of a react table where users can organize their personal shopping/ingredients list where the user can view for later use. The shopping list is divided into two columns 'item name' and quantity, when the user adds an item it is then added to a total that adds up the quantity of items added to the list and is printed to the bottom of the table. After an item is collected the user can actually cross that item off the list by clicking a checkbox that sits beside each item on the list.
 
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/shoplist.png}
+    \caption{Shopping List Page}
+    \label{fig: Image of Shopping List Page}
+  \end{figure}
+\end{center}
+
 \subsection{Dietary Requirements}
 
 The Dietary Requirements component is a page of the application where users can research various dietary information of diets that the application provides. The page consists of a HTML table that contains various diet plans, for example a vegetarian diet, ketogenic diet and paleo diet. Each table consists of pie chart containing the percentage of protein, fats, carbohydrates and fruits/vegetables the user must follow for this specific diet as well as a hyperlink where user can gain more information of every diet.
+
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/charts.png}
+    \caption{Pie Charts}
+    \label{fig: Image of Dietary Charts}
+  \end{figure}
+\end{center}
 
 \subsection{Navigation Bar}
 
 The Navigation Bar component is at the top of each page as you navigate throughout the application, the navigation bar component contains all the hyperlinks to all the other pages that consists of the application, this navigation bar allows the user to navigate and move to all the different pages of the application. If the user is unregistered, the only pages they can navigate to are the 'Home', Register' and 'Log In' pages and when the user is registered the pages the user can navigate to are 'Home', 'Meal Listing', 'Shopping List', 'Requirements', 'Calories Calculator' and 'Logout'.
 
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/navbar.png}
+    \caption{Navigation Bar}
+    \label{fig: Image of Navigation Bar}
+  \end{figure}
+\end{center}
+
 \subsection{Jumbotron}
 
 The Jumbotron component is a simple HTML jumbotron that we use in our home (dashboard) page, the component contains a background image and a search bar for the meal landing component, where users can search for specific meals (recipes) based on the string of characters the user has added in the search bar, after the user clicks the search button then only meals matching the string of characters are displayed on the page.
+
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/jumbotron.png}
+    \caption{Jumbotron}
+    \label{fig: Image of Jumbotron}
+  \end{figure}
+\end{center}
 
 \subsection{404}
 
@@ -1056,21 +1118,79 @@ This application is internet dependent and an internet connection is compulsory 
 
 In this section, I will discuss what I learned throughout the development of my application.
 
+\subsection{Project Management}
+
+Project management was the most important lesson I gained as I intend to move deeper into the world of software engineering where working with other developers, project management is gong to be the most important factor while working on a software project or product. During the development lifecycle of the application, I gained project management skills such as problem solving, time management and risk management needed to initiate, plan, and execute a project, the only difference being project management usually is learned from working with a team of people as opposed to working by yourself.
+
+\subsection{Scope}
+
+During the planning phase of the application, I learned a lot especially attempting to gauge what is the correct size of the scope for this project. I went through countless brainstorming sessions of what my project was going to be, after several concepts and ideas that fell to the wayside (due to not believing the scope was big enough), I encountered an idea that I thought would work and if the initial ideas scope wasn't large enough then I could still expand upon it. \\ \\
+While encountering this issue, scope creep was another issue that I encountered when dealing with the scope of the project but this was an issue during the developmental phase (coding). Scope creep in project management refers to changes, continuous or uncontrolled growth in a project’s scope, at any point after the project begins. It was difficult to continuously combat scope creep due to the number features and improvements I planned to add to my application, this lead to features (see Incomplete Ideas) that I wished to implement being left out due to time constraints and focus on the main features I had already set out to complete.\\ \\
+After completing this application, I learned the heavy disadvantages that come with scope creep as it forced me to rush the focus certain features at times but at the same time it informed me on how to tolerate this issue in any upcoming projects, by assigning a weight to each task or feature, the heaviness of the weight regarding it's significance.
+
+\subsection{Objectives}
+
+When I set out the objectives for myself to be completed, I planned to do research on each of these objectives to gain knowledge of what I am trying to accomplish, for the most part I had to understand applications and how they work. For example, one of my objectives was to create a large scale, multi-user, functioning web application that can be accessed, in doing this I had to research what is a web application and how does it different from other types of applications, e.g. mobile application, I also had to gain knowledge on what makes an application to be considered large scale.
+
+\subsection{MERN Stack}
+
+I gained much knowledge pertaining to the MERN Stack and the four key technologies that make up the stack, I had little experience with each of these technologies but after building this application, I gained so much experience and knowledge with these frameworks and learning these technologies helped me gain the skill of learning new frameworks. ReactJS provided me with many libraries to implement functionality such as saving user sessions, encrypting passwords or drawing charts, ReactJS to me was more appealing than using an alternative framework (AngularJS). ExpressJS and NodeJS helped me develop the back end of my application and run on a machine rather than a browser. MongoDB really taught me so much about the inner workings of databases and how they are operated and used.
+
 \section{What I Did Different}
 
 In this section, I will discuss how my application differs from meal planning applications nowadays.
+
+\subsection{Shopping List}
+
+During the research phase of my application, I viewed the most popular meal planning applications and compared them all and I noticed that while it is easy to develop an app to sort out meals that a person will eat in a day, these apps don't provide any type of organization for the ingredients these meals need. I believe this feature is necessary as sorting out what ingredients are needed for the day provides many advantages such as cost effectiveness as it impacts the cash you spend and it is an easy way to track calories and weight gain. I created this feature using a simple React Hook Form that I connected to our database where users can add, edit and delete the ingredients and the quantity of said ingredient.
+
+\subsection{Calculator}
+
+We discussed earlier on the addition of this BMR (Basic Metabolic Rate) and Calories Needed Calculator that is used to calculate both the BMR and calories needed by the user based on information the user provides (age, gender, weight, height, etc.). This feature was actually a late idea in the planning phase and came just before I was moving into to the coding stage of my application, after vigorous research I came up with the idea that a calculator to calculate both the BMR and calories needed was positive for the application and works well the concept of the application and meal planning and weight watching go hand in hand, this feature is something you will not find in meal planning apps but I believe this is something that is important to add to meal planning apps in the future.
+
+\subsection{Dietary Information}
+
+This is a simple feature that I didn't notice any other applications in this dame field provided, where the user is provided with links containing information on various diets in the world that a user may want to either follow or might want to look into. I did this in conjunction with the dietary charts (I will discuss this feature later) and I provided various chart, each containing a specific diet with a hyperlink that navigates the user to a site with much more information on this specific diet.
+
+\subsection{Dietary Charts}
+
+I previously mentioned above how my Dietary Charts feature worked in conjunction with the Dietary Information feature. I created a page full of a table of pie charts, each chart represented an official diet (vegan diet, ketogenic diet, low-carb diet, etc.), the data of each chart are based on the percentage of food intake of different 3 or 4 food groups (Fruits \& Vegetables, Carbohydrates, Proteins and Fats) where if the user selects to use this diet they must confine to this food intake regimen. I created this feature by simply using HTML Tables to help set up the table to accommodate the charts and the JavaScript library chart.js to create each chart, I pondered the idea to use an API and GraphQL to represent the data but in the end I came to the conclusion that using chart.js and setting the data manually was the easier option.
 
 \section{How Did Testing and Methodology Help}
 
 In this section, I will discuss how the addition of testing and methodology helped me throughout the development of my application.
 
+\subsection{Testing}
+
+The use of testing frameworks was needed in the development of this application, there are many different roles needed in the software development lifecycle albeit the UX/UI designer, software developer, project manager but one role that is very important is the tester, in doing this project I had to take on all roles each one and while developing code for the application, the use of testing helped me to improve code quality as I would continuously test my application to check if the code works as intended or if any new code addition affects the previous code that existed allowing me to refactor this code once every check is complete. This very advantage helped me to complete many of the components and features that I set to create for the application as instead of reflecting on how far can I go to make this component or feature as great as I had in my mind, I decided it was better for the feature to pass all tests instead.
+
+\subsection{Methodology}
+
+The use of Agile Methodology (specifically Atlassian) was exponentially important in the development of this application, it was the most important practice I could have used to maintain the project management of the development of the application, it was the use of sprints is what helped me complete this application in the time frame that I wished to complete it in. The sprints were designed to be completed in two week periods where in each sprint I set out a list of objectives that had to be completed (if any errors/faults occurred they were to be noted and dealt with later) and this allowed me to implement all functionality and features with the least amount of fault and as smoothly as possible. The issues that occurred in any sprint was documented in a backlog where I would check the error and add to another sprint to be completed.
+
 \section{What Changes Would I Make}
 
 In this section, I will discuss if there are any changes I would have made to my application after now completing it.
 
+\subsection{Planning Phase}
+
+The planning phase had a few ups and downs that could have been avoided while planning for all areas of the project, reflecting on this time I felt that I could have put even more thought into this project during this phase, some issues I encountered during this phase included continuously changing what the project was going to be and fleshing out better ideas for functionality. I kept changing what the concept of the was going to be due to either not fully liking the idea or being over concerned with if the scope of this project was large enough, this could have been prevented if I had put more thought and effort in the planning phase of this project. During the development of my application, there were many features that I wished to add to my application but didn't come to fruition and in return there was features that I did implement into my application that were not not thought through to the best of my ability, if I had planned these features better these features would have been done without error and may have been more advanced than the current version. Apart from the above mentioned issues, the planning phase in my eyes was a success and went as intended to.
+
+\subsection{Incomplete Ideas}
+
+I previously mentioned how I had features that I wished to implement into my application but due to some poor planning techniques these ideas could not reach fulfillment, one idea was to add another API to my application that would allow users to view the different restaurants that are in their region/area using a Google Map like feature. This idea I was very excited to implement and I taught it would have been a great feature to work with the application but due to poor planning this could not emerge as intended.
+
 \section{Summary}
 
 In this section, I will give a brief summary and some last words for this dissertation regarding my project.
+
+\subsection{In Conclusion}
+
+In conclusion, this module as well as my four years of learning at GMIT, assisted in helping me gain so many skills and qualities of a software developer, as I used these skills to create a multi-user, web application, an application that I out my heart and soul into and one that I am very proud of. I learned to think like a software developer when developing projects, focusing on aspects such as the User Experience, User Interface, planning, testing, documentation and so on but most important it taught me to understand quality of code and how to differentiate between good and bad code. \\ \\ 
+I would like to send a personal thank you to every single lecturer that has played a role in my four year journey of software development, I wish I could name them all but there won't be enough space in this report, your distribution of knowledge in the field of computer science helped me gain and improve the necessary skills needed in this field and provided me with a protective and engaging environment to do so which has helped prepare me for the future. I can only express how much your lessons, teachings and the experience you provided as a whole have taught me a lot about myself as a person and what I would like my future to become. \\ \\ 
+Thank you so much for reading through this long dissertation and looking at my project, it has been long but adventurous journey where I have learned various fields in regards to computer science. When I first decided to follow this course, I didn't know much or anything about coding but I always enjoyed learning about computers and I was under the notion that software development involved just writing pieces of code that function together but I now see the bigger picture where planning, time management, risk management, scheduling, problem solving and so many more factors are the main priorities when supplying a customer with a software product.\\ \\ 
+Finally, I wish to also like to give some personal praise to my final year project supervisor, Dr. Joseph Corr for really giving me so much help and guidance throughout this whole process, whether it was helping me brainstorm ideas, suggesting the use of Agile Methodology and guiding me through the design phase of my application, it was with his helping hand that everything went as smooth as it did and for that I am forever thankful.\\ \\ 
+Thank you to all reviewing this dissertation and observing my code, I hope this is to your normal high standard and please view the hyperlinks provided by myself to all further documentation in the Appendix section coming up next. My name is Emmanuel Osabuehien and this is my final year project. Farewell.
 
 \begin{appendices}
 \begin{itemize}

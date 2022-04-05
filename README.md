@@ -215,6 +215,17 @@ Click here to view the PDF of of my accompanying dissertation during the develop
     - Finish Second Half Of 'System Evaluation' Section Of Dissertation
     - Test Code    
 
+- **Sprint 11 (4th March 2022 - 18th March 2022)**:
+    - Finish First Half Of 'Conclusion' Section Of Dissertation
+    - Test Code 
+
+- **Sprint 12 (18th March 2022 - 1st April 2022)**:
+    - Finish Second Half Of 'Conclusion' Section Of Dissertation
+    - Add Referenes To Bibliography Of Dissertation
+    - Check All Working Code
+    - Record Demo Of Working App
+    - Test Code
+
 ## Conclusion<a name = "conclusion"></a>
 
 - I have created a meal planning application.
