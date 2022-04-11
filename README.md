@@ -129,9 +129,13 @@ node server.js
 
 Click here to view a quick demonstration of the application with a rundown of the project code and repository:
 
+[![Watch the video](https://i.imgur.com/BrK6ZJg.png)](https://youtu.be/iGCd3yzn-d0)
+
 ## Dissertation<a name = "dissertation"></a>
 
 Click here to view the PDF of of my accompanying dissertation during the development of the application:
+
+<kbd>[<p align="center"><img src="https://i.imgur.com/PGpOPr5.png" height="500"></img></p>](https://github.com/Emmanuel-Osabuehien/AppliedProjectMinorDissertation/blob/main/dissertation/dissertation.pdf)</kbd>
 
 ## Sprints<a name = "sprints"></a>
 
